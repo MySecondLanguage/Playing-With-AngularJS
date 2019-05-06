@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script type="text/javascript" src="routing.js"></script>
+<script type="text/javascript" src="filter.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body ng-app="app">
+
+<div class="container">
+    <h3>A dummy Angular App with some lazy features</h3> <br>
+    
+    <div class="row">
+        <div class="col-sm-3 well" style="min-height: 100%">
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#!/sumurl/10/20">sumurl</a></li>
+                <li class="list-group-item"><a href="#!/suminput">Routring</a></li>
+                <li class="list-group-item"><a href="#!/filter">Filter</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm-9 well" style="min-height: 100%">
+            <div ng-view></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.min.js"></script>
+
+<script type="text/javascript" src="routing.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body ng-app="app">
+
+<a href="#!/">Home</a> <br>
+<!--
+<a href="#!/first-msg">FirstMessage</a> <br>
+<a href="#!/second-msg">SecondMessage</a> <br>
+<a ui-sref='firstMessage()'>First Message</a>
+<a ui-sref='secondMessage()'>Secon Message</a>
+<div ui-view> 
+<a ui-sref='irstMessage()'>First Message</a>
+</div>
+-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3">
+			<ul>
+				<li><a href="#!/first-msg">First Message</a></li>
+				<li><a href="#!/second-msg">Second Message</a></li>
+			</ul>
+		</div>
+
+		<div class="col-sm-9">
+			<div ui-view></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

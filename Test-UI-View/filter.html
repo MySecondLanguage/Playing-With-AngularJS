@@ -1,0 +1,10 @@
+<table border="1" width="50%">
+<tr>
+<th>id</th>
+<th>name</th>
+</tr>
+<tr ng-repeat="x in names | orderBy: 'name' ">
+<td>{{x.id}}</td>
+<td>{{x.name}}</td>
+</tr>
+</table>
