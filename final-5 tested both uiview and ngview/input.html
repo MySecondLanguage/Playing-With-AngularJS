@@ -1,0 +1,11 @@
+<form>
+  <div class="form-group">
+    <label for="id">ID :</label>
+    DigitsOnly<br/><input ng-model="id" restrict-input="{type: 'digitsOnly'}"/>
+  </div>
+  <div class="form-group">
+    <label for="name">NAME :</label>
+    lettersOnly<br/><input ng-model="name" restrict-input="{type: 'lettersOnly'}"/>
+  </div>
+  <button class="btn btn-primary" ng-click="PassDataToDisplyThroughUrl()">Submit</button>
+</form>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.min.js"></script>
+</head>
+<body ng-app="app">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 well" style="min-height: 100%">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#!/input">input</a></li>
+                    <li class="list-group-item"><a href="#!/filter">filter</a></li>
+                   
+                </ul>
+            </div>
+
+            <div class="col-sm-9 well" style="min-height: 100%">
+                <div ui-view="inputView"></div>
+                <hr>
+                <div ng-view></div>
+                <hr>
+                <div ui-view></div>
+            </div>
+
+        </div>
+     </div>
+     <script type="text/javascript" src="app.js"></script>
+     <script type="text/javascript" src="restrict.js"></script>
+     <script type="text/javascript" src="filter.js"></script>
+     <script type="text/javascript" src="inputANDdisplay.js"></script>
+</body>
+</body>
+</html>

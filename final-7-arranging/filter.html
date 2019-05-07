@@ -1,0 +1,19 @@
+<strong>Your seeling this data from controller where store some javacript array of object and it is filtered with orderedBy name</strong> <br>
+<br>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="x in names | orderBy: 'name' ">
+      <td>{{ x.id }}</td>
+      <td>{{ x.name }}</td>
+    </tr>
+  </tbody>
+</table>
+
