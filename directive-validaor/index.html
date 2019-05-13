@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	<script type="text/javascript" src="mamun.j"></script>
+</head>
+<body>
+
+	<div ng-app="sampleapp">
+    <div ng-controller="samplecontoller" >
+     <form name="form" disable-btn ng-submit="submitForm()">
+       <div>
+          <input type="text" ng-model="model.name" required></input>
+      </div>
+      <div>
+        <input type="number" ng-model="model.number" required></input>
+       </div>
+       <div>
+        <input type="email" ng-model="model.email" required></input>
+       </div>
+      <div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>  
+    </div>
+</div>
+
+</body>
+</html>
