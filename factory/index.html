@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS factory</title>
+    <script data-require="angular.js.1.3@*" data-semver="1.5.2" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <div ng-app="app" ng-controller="myCtrl">
+    <form>
+        <input ng-model="inputedData">
+        <button ng-click="formModel(inputedData)">submit</button>
+    </form>
+    
+    
+    <h1>{{ myCollections }}</h1>
+    
+    </div>
+
+</html>
