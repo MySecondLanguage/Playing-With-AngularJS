@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="namesCtrl">
+
+    <select ng-model="selected">
+        <option value="RICH">Rich</option>
+        <option value="POOR">POOR</option>
+        <option value="EXTREM POOR">EXTREM POOR</option>
+        <option value="VERY POOR">VERY POOR</option>
+        <option value="VERY RICH">VERY RICH</option>
+      </select> 
+
+
+<table border="1" width="100%">
+    <tr>
+    <th>Name</th>
+    <th>Country</th>
+    <th>Type</th>
+    </tr>
+    <tr ng-repeat="x in names | filterType:selected">
+    <td>{{x.name}}</td>
+    <td>{{x.country}}</td>
+    <td>{{x.type}}</td>
+    </tr>
+    </table>
+
+<script>
+var app = angular.module('myApp', []);
+app.filter('filterType', function() {
+    return function (items, selectedType) {
+        return items.filter(function(item) {
+            return item.type === selectedType
+        })
+    };
+});
+app.controller('namesCtrl', function($scope) {
+    $scope.selected = 'RICH';
+    $scope.names = [
+    {name:'Jani',country:'Norway', type: 'RICH'},
+    {name:'Carl',country:'Sweden', type: 'POOR'},
+    {name:'Margareth',country:'England', type: 'EXTREM POOR'},
+    {name:'Hege',country:'Norway', type: 'RICH'},
+    {name:'Joe',country:'Denmark', type: 'VERY POOR'},
+    {name:'Gustav',country:'Sweden', type: 'VERY POOR'},
+    {name:'Birgit',country:'Denmark', type: 'VERY RICH'},
+    {name:'Mary',country:'England', type: 'RICH'},
+    {name:'Kai',country:'Norway', type: 'POOR'}
+    ];
+});
+</script>
+
+</body>
+</html>
